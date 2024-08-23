@@ -1,0 +1,25 @@
+.transition-main {
+  transition-property: opacity, transform;
+  transition-duration: 200ms;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+html.is-animating .transition-main {
+  opacity: 0;
+  transform: translateX(-1em);
+}
+
+html.is-leaving .transition-main {
+  transform: translateX(1em);
+}
+
+
+html.is-animating.to-left .transition-main {
+  opacity: 0;
+  transform: translateX(1em);
+}
+
+html.is-leaving.to-left .transition-main {
+  transform: translateX(-1em);
+}
