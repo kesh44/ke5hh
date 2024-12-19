@@ -9,13 +9,14 @@ body {
   padding: 0;
   line-height: 1.5;
   height: 100vh;
-  background-color: var(--black);
-  color: #e2e2e2;
+  background-color: #eee;
+  color: #666;
 }
 
 #name {
   font-size: 25px;
   font-weight: 800;
+  color: #333;
 }
 
 #header {
@@ -26,14 +27,28 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  margin-right: 5px;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #333;
+  cursor: pointer;
 }
 
-video {
+#ig {
+  float: right;
+}
+
+.selected {
+  color: #111;
+}
+
+video, img {
   width: 100%;
+}
+
+#profile {
+  width: 300px;
 }
 
 .container {
@@ -42,23 +57,4 @@ video {
 
 .content-group {
   padding-bottom: 20px;
-}
-
-/*#header {
-  position:absolute;
-  top:0px;
-  left:0px;
-  right:0px;
-  padding: 30px;
-}
-
-#footer {
-  position:absolute;
-  bottom:0px;
-  left:0px;
-  right:0px;
-  padding: 30px;
-}*/
-
-#content {
 }
