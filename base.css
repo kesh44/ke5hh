@@ -20,7 +20,7 @@ body {
 }
 
 #header {
-  padding-top: 30px;
+  padding-top: 20px;
   padding-bottom: 10px;
 }
 
@@ -52,7 +52,7 @@ video, img {
 }
 
 .container {
-  padding: 20px 80px;
+  padding: 5px 20px;
 }
 
 .content-group {
