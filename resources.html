@@ -15,7 +15,8 @@
     <div id="header">
       <div id="name">kesh</div>
       <a href="/">work</a>
-      <a href="colour" class="selected">colour</a>
+      <a href="resources" class="selected">resources</a>
+      <a href="about">about</a>
       <a  id="ig" href="https://www.instagram.com/ke5hh/">
         <i class="fa-brands fa-instagram"></i> ke5hh
       </a>
@@ -27,20 +28,16 @@
         <img src="thegrade.png">
         <p>A breakdown of the simple and effective node structure I use when colour grading footage in Davinci Resolve.</p>
         
-        <div class="divider">/// setup ///</div>
-
         <h3>1. colour management</h3>
         <p>Use a colour space transform (CST) to convert your input footage into your working colour space. in my case, this is from S-Log3 to Davinci Wide Gamut (DWG).</p>
-
-        <div class="divider">/// corrections ///</div>
         
         <h3>2. white balance</h3>
-        <p>Correct the white balance in the image.</p>
+        <p>Correct the white balance in the image. Try to get this right in camera though. With video, we're usually not shooting RAW (Log is not RAW), so the white balance set when recording is baked into the footage.</p>
         
         <h3>3. exposure</h3>
         <p>Make exposure adjustments to the image. I use the Global Exposure slider in the HDR tab. You can also make some contrast adjustments here.</p>
         <div class="info">
-          <div>This one often gets missed. Remember to set the correct colour space and gamma in your HDR tab, so Davinci knows how to adjust the exposure in a natural way. In my case, this is DWG. If you're working in S-Log3, it should be S-Log3.</div>
+          <div>Remember to set the correct colour space and gamma in your HDR tab, so Davinci knows how to calculate your exposure adjustments in a way that looks natural. In my case, this is DWG. If you're working in S-Log3, it should be S-Log3.</div>
           <img style="margin-top: 10px;" src="exposure.PNG">
         </div>
         
@@ -50,8 +47,6 @@
         <h3>5. pre-contrast (optional)</h3>
         <p>This depends on the characteristics of your creative look or film print LUT (which comes in the following step). The Kodak film print that I use is high-contrast, so I reduce the contrast in this LUT in preparation, so the final result is not too crunchy. I use the contrast slider in the HDR tab. Again, use the correct Colour Space and Gamma.</p>
         
-        <div class="divider">/// creative look ///</div>
-
         <h3>6. film print</h3>
         <p>This is the core of your 'look'. I use a Kodak 2383 film emulation LUT, which accepts an input in DWG, and outputs in DWG.</p>
         
@@ -66,7 +61,7 @@
         <p>Use a CST to convert your working footage to your output colour space, this will usually be Rec.709.</p>
         <p>And there you have it! No gatekeeping, no ads, no bs. If you found this useful, a like or follow on my Instagram would be much appreciated :)</p>
 
-        <a href="https://www.instagram.com/ke5hh/">
+        <a class="ig-inline" href="https://www.instagram.com/ke5hh/">
           <i class="fa-brands fa-instagram"></i> ke5hh
         </a>
 
