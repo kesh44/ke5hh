@@ -25,8 +25,8 @@ body {
 }
 
 #header {
-  padding-top: 25px;
-  padding-bottom: 15px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 #header a {
@@ -52,11 +52,20 @@ a {
   float: right;
 }
 
+h2 {
+  margin-top: 0px;
+}
+
 video, img {
   width: 100%;
 }
 
+.lesson-msg {
+  font-size: 40px;
+}
+
 #profile {
+  width: 300px;
 }
 
 .container {
@@ -72,12 +81,13 @@ video, img {
 }
 
 .info {
-  background: #e5e5e5;
-  padding: 14px;
-  font-size: 14px;
-  border-radius: 4px;
+  background: #dd225529;
+  padding: 20px;
+  margin: 25px 15px;
+  margin-right: 25px;
+  border-radius: 0px 5px 5px 0px;
+  border-left: 5px solid #D25;
   color: #000000;
-  margin: 0px 14px;
 }
 
 .emphasis {
@@ -86,4 +96,23 @@ video, img {
 
 .divider {
   text-align: center;
+}
+
+.em {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.btn {
+      display: inline-flex
+;
+    /* align-items: center; */
+    /* justify-content: center; */
+    background: #f2d3dd;
+    padding: 12px 23px;
+    border-radius: 5px;
+}
+
+.btn-icon {
+  margin-right: 10px;
 }
