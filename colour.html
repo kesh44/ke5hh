@@ -17,39 +17,47 @@
       <a href="/">work</a>
       <a href="colour" class="selected">colour</a>
       <a  id="ig" href="https://www.instagram.com/ke5hh/">
+
         <i class="fa-brands fa-instagram"></i>
+        ke5hh
       </a>
     </div>
 
     <div id="content">
       <div class="content-group">
-        <h2>How to colour grade</h2>
+        <h2>how to colour grade</h2>
         <img src="img/ariso.jpg">
         <p>A simple and effective method to follow when colour grading footage in Davinci Resolve.</p>
 
-        <h3>Begin at the last (?) step</h3>
-        <p><span class="em">Convert your LOG footage</span> - the first thing you should do is use a colour space transform (CST) node to convert your LOG footage to Rec.709. In my case, this is from S-Log3 to Rec.709 Gamma 2.2. The Gamma depends on your monitor, if you don't know, it's most likely 2.4.</p>
+        <h3>1. set up your colour management</h3>
+        <p><span class="em">Convert to Rec.709</span> - Use a Colour Space Transform (CST) node to convert your LOG footage to Rec.709. In my case, this node converts S-Log3 footage to Rec.709 gamma 2.2. The gamma to use depends on what your monitor is displaying. If you don't know, your monitor is probably displaying gamma 2.4.</p>
         <img src="img/cst.jpg">
-        <p>In the editing pipeline, this is one of the last steps, so it's counterintuitive to do it first. But we do this so we can view a proper representation of our image, as the camera saw the scene. This is your starting point when colour grading.</p>
+        <p>When colour grading, the Rec.709 conversion is one of the last steps in the pipeline, so it's counterintuitive to do it first. But we do this so we can view an accurate representation of our image.</p>
 
-        <div class="info">A properly exposed and white balanced shot will already look good after the correct Rec.709 transform. If the image doesn't look good, there is an issue with your settings.</div>
+        <p>This is always your starting point when colour grading.</p>
+
+        <div class="info">A properly exposed and white balanced shot should already look pretty good after the correct Rec.709 transform. If the image doesn't look good already, there is an issue with either your camera or CST settings.</div>
         
-        <h3>Make the basic corrections</h3>
+        <h3>2. make the basic corrections</h3>
         
         <p>Next we'll correct the exposure and white balance. Make two new nodes BEFORE the CST node.</p>
         <img src="img/nodes.jpg"/>
-        <p><span class="em">White balance</span> - correct the white balance in the image. I prefer to do this by switching the Gamma of the White Balance node to Linear and using the Gain tool in the Primaries to push the image towards a certain colour.</p>
+        <p><span class="em">White balance</span> - correct the white balance in the image. I prefer to do this by switching the Gamma of the White Balance node to Linear and using the Gain tool in the Primaries to correct any colour casts.</p>
+
         <img src="img/lineargamma.jpg"/>
 
-        <div class="info">Try to set the correct white balance in-camera. With video, we're usually not shooting RAW (note: LOG is not RAW), so the white balance is baked into the footage. We don't want to have to make drastic changes.</div>
+        <div class="info">Try your best to set the correct white balance in-camera. With video, we're usually not shooting RAW (note: LOG is not RAW), so the white balance is somewhat baked into the footage. We don't want to have to make drastic changes.</div>
 
         <p><span class="em">Exposure</span> - make exposure adjustments to the image. I use the Global Exp slider in the HDR - Color Wheels tab. You can also make some contrast adjustments here.</p>
 
         <p>Remember to set the correct colour space and gamma in your HDR tab, so Davinci knows how to correctly respond to your exposure adjustments. In my case, this is S-Log3.</p>
         <img src="exposure.PNG"/>
 
-        <h3>Creative looks</h3>
-        <p>By now, you have a colour corrected, exposure corrected image which looks 'fine', but probably not inspiring. Now that we have the basics out of the way, we can start pushing the image in a creative direction. What methods can help you achieve that?</p>
+        <h3>3. creative looks</h3>
+
+        <p>By now, you have a colour corrected, exposure corrected image which probably looks fine but not inspiring. Now that we have the basics out of the way, we can start developing the creative look.</p>
+
+        <p>What methods can you use to achieve that?</p>
 
         <p><span class="em">Colour boost</span> - Add saturation to the image, increasing the intensity while keeping the colours rich and dense. The best method for this is a technique called subtractive saturation. There are many ways to achieve this. If you have the Davinci Film Look Creator tool, use the Subtractive Sat slider. Alternatively, I have created a filmic Colour Boost LUT which you can download and use for free. This works best in a node after your CST.</p>
 
@@ -62,12 +70,12 @@
           </a>
         </div>
 
-        <p><span class="em">Film print</span> - one of the most common ways to add a creative look is to use a film print LUT. There are many out there. One of the common issues I see with them is the way they handle red lights. Not usually an issue for typical video applications like portraiture, weddings or commercial. It does become an issue when you start filming cars and their rear lights.</p>
+<!--         <p><span class="em">Film print</span> - one of the most common ways to add a creative look is to use a film print LUT. There are many out there. One of the common issues I see with them is the way they handle red lights. Not usually an issue for typical video applications like portraiture, weddings or commercial. It does become an issue when you start filming cars and their rear lights.</p>
 
         <p>To address this, I've made a custom film print LUT designed with automotive video in mind.</p>
 
         <div style="text-align: center;">
-          <a href="https://keshpianomusic.gumroad.com/l/qnpcb?wanted=true">
+          <a href="#">
             <div class="btn">
               <div class="btn-icon">
                 <i class="fa-solid fa-up-right-from-square"></i>
@@ -75,13 +83,11 @@
               <div class="btn-txt">Film Print LUT</div>
             </div>
           </a>
-        </div>
+        </div> -->
 
-        <p><span class="em">Split toning</span> - another common way to add some contrast to your image, using a push-pull principle. Generally, this involves adding a teal tint to your shadows, and an orange tint to your midtones and highlights. Be very careful not to overdo this. It's better when its affect is felt subconsciously rather than seen.</p>
+        <p><span class="em">Split toning</span> - another common way to add some contrast to your image, using a push-pull principle. Generally, this involves adding a teal tint to your shadows, and an orange tint to your midtones and highlights. Be very careful not to overdo this. It's best when its effect is subconsciously felt rather than consciously percieved.</p>
 
-        <p><span class="em">Halation</span> - use it sparingly. Halation are the subtle glows that film renders along bright light sources in the scene.</p>
-
-
+        <p><span class="em">Halation</span> - use it sparingly. Halation is the subtle glow that film renders along bright edges in the frame. It's a result of light reflecting off the emulsion layers of film.</p>
 
         <p><span class="em">And that's all it really takes </span> - no gatekeeping, no ads, no bs. If you found this guide useful, a like or follow on my Instagram would be much appreciated :)</p>
         <p><a class="ig-inline" href="https://www.instagram.com/ke5hh/"><i class="fa-brands fa-instagram"></i> ke5hh</a></p>
