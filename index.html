@@ -1,47 +1,60 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
+  <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>ke5hh - video production</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="base.css" />
+  
+  <!-- Option 1: Include in HTML -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>kesh - Automotive Filmmaker</title>
 </head>
 <body>
   <div class="container">
-    <div id="header">
-      <div id="name">kesh</div>
-      <a href="/" class="selected">work</a>
-      <a href="colour">colour</a>
-      <a  id="ig" href="https://www.instagram.com/ke5hh/">
-        <i class="fa-brands fa-instagram"></i> ke5hh
-      </a>
-    </div>
-
-    <div id="content">
-      <div class="content-group">
-        <video autoplay muted loop>
-          <source src="matt.mp4" type="video/mp4"/>
-        </video>
-      </div>
-      <div class="content-group">
-        <video controls poster="pawelposter.jpg">
-          <source src="pawel.mp4" type="video/mp4"/>
-        </video>
-      </div>
-      <div class="content-group">
-        <video controls poster="normposter.jpg">
-          <source src="norm.mp4" type="video/mp4"/>
-        </video>
+    <div class="px-2 pt-4">
+      <div class="title">kesh</div>
+      <div>Automotive filmmaker based in the UK</div>
+      <div class="d-inline">projects@ke5hh.com</div>
+      <div class="d-inline spacer">|</div>
+      <div class="d-inline">
+        <a href="https://www.instagram.com/ke5hh/"><i class="bi bi-instagram"></i> ke5hh</a>
       </div>
     </div>
 
-    <div id="footer">
-      <div>projects@ke5hh.com</div>
+    <div class="row g-0 py-4">
+      <div class="col-md-4 px-2 vid">
+        <iframe src="https://player.vimeo.com/video/1080009195?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1080" height="1920" frameborder="3" allow="fullscreen;" title="The BMW E30"></iframe>
+      </div>
+      <div class="col-md-4 px-2 vid">
+        <iframe src="https://player.vimeo.com/video/1080818113?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1080" height="1920" frameborder="3" allow="fullscreen;" title="The Corvette C6"></iframe>
+      </div>
+      <div class="col-md-4 px-2 vid">
+        <iframe src="https://player.vimeo.com/video/1080977562?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1080" height="1920" frameborder="3" allow="fullscreen;" title="Matt's Lamborghini Huracan"></iframe>
+      </div>
     </div>
+
+    <div class="row g-0 py-4">
+      <div class="col-md-7 px-2">
+      <div class="title pb-4">filmmaker and colourist</div>
+        <div class="mb-3">Kesh creates cinematic visuals for premium automotive brands, backed by a strong foundation in color grading.</div>
+        <div class="mb-3">With over 400 LUT packs sold and experience teaching others how to grade, Kesh’s work reflects both creative expertise and industry credibility.</div>
+        <div>projects@ke5hh.com</div>
+      </div>
+      <div class="col-md-5 px-2">
+        <img class="w-100 flip" src="ursa.jpg">
+      </div>
+    </div>
+
   </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
