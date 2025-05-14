@@ -30,3 +30,7 @@ img {
   clip-path: circle();
   width: 96px;
 }
+
+iframe {
+  aspect-ratio: 9 / 16;
+}
