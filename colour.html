@@ -1,114 +1,91 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
+  <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>ke5hh - video production</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="base.css" />
+  
+  <!-- Option 1: Include in HTML -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Kesh - Creative Director & Colourist</title>
 </head>
 <body>
   <div class="container">
-    <div id="header">
-      <div id="name">kesh</div>
-      <a href="/">work</a>
-      <a href="colour" class="selected">colour</a>
-      <a  id="ig" href="https://www.instagram.com/ke5hh/">
+    <div class="py-5">
+      <img class="profile py-2" src="ig.jpg">
+      <div class="py-2 title">Kesh</div>
+      <div>Creative Director & Colourist</div>
+      <div class="d-inline">projects@ke5hh.com</div>
+      <div class="pt-5 pb-1 display-5 fw-bold">How to Colour Grade</div>
+      <p class="pb-5">A clear and practical workflow for DaVinci Resolve.</p>
 
-        <i class="fa-brands fa-instagram"></i>
-        ke5hh
-      </a>
-    </div>
-
-    <div id="content">
-      <div class="content-group">
-        <h2>how to colour grade</h2>
+      <div class="text-left">
         <img src="img/ariso.jpg">
-        <p>A simple and effective method to follow when colour grading footage in Davinci Resolve.</p>
 
-        <h3>1. set up your colour management</h3>
-        <p><span class="em">Convert to Rec.709</span> - Use a Colour Space Transform (CST) node to convert your LOG footage to Rec.709. In my case, this node converts S-Log3 footage to Rec.709 gamma 2.2. The gamma to use depends on what your monitor is displaying. If you don't know, your monitor is probably displaying gamma 2.4.</p>
-        <img src="img/cst.jpg">
-        <p>When colour grading, the Rec.709 conversion is one of the last steps in the pipeline, so it's counterintuitive to do it first. But we do this so we can view an accurate representation of our image.</p>
 
-        <p>This is always your starting point when colour grading.</p>
+        <p class="h3 my-4 fw-bold">Set Up Color Management</p>
+        <p><strong>Convert to Rec.709</strong> - Use a Color Space Transform (CST) node to convert your LOG footage to Rec.709. For example, I convert S-Log3 to Rec.709 Gamma 2.2. The gamma setting depends on your monitor - if you're unsure, it's likely displaying Gamma 2.4.</p>
+        <img class="mt-2 mb-4" src="img/cst.jpg">
+        <p>Although the Rec.709 transform typically comes last in a grading pipeline, we apply it first here to view an accurate representation of the image during grading.</p>
 
-        <div class="info">A properly exposed and white balanced shot should already look pretty good after the correct Rec.709 transform. If the image doesn't look good already, there is an issue with either your camera or CST settings.</div>
+        <p>This Rec.709 conversion is always the starting point.</p>
+
+        <p>If your image doesn’t look good after this step, the issue is likely with your exposure, white balance, or CST settings.</p>
+
+        <p class="h3 my-4 fw-bold">Make Basic Corrections</p>
+
+        <p>Create two nodes before the CST node for white balance and exposure adjustments.</p>
+        <img class="mt-2 mb-4" src="img/nodes.jpg"/>
+        <p><strong>White Balance</strong> - Adjust white balance using a node set to Linear Gamma. I recommend using the Gain wheel in the Primaries tab to remove any color casts. Ideally, white balance should be set correctly in-camera. Since LOG is not RAW, the white balance is partially baked in-so avoid drastic corrections where possible.</p>
+
+        <img class="mt-2 mb-4" src="img/lineargamma.jpg"/>
+
+        <p><strong>Exposure</strong> - Correct exposure using the Global Exposure slider in the HDR Color Wheels tab. Minor contrast adjustments can also be applied here.</p>
+
+        <p>Make sure the HDR tab is set to the correct color space and gamma (e.g., S-Log3) so Resolve processes the exposure properly.</p>
         
-        <h3>2. make the basic corrections</h3>
+        <p class="h3 my-4 fw-bold">Apply Creative Looks</p>
+
+        <p>At this stage, you should have a technically accurate image. Now, it’s time to bring it to life with a stylized look.</p>
+
+        <p><strong>Subtractive Saturation</strong> - Boost color while preserving density and realism. If you’re using the DaVinci Film Look Creator tool, try the Subtractive Saturation slider.</p>
+        <p>Alternatively, you can download my free <a class="link-light" href="ke5hh_boost.cube" download>Filmic Color Boost LUT</a>, designed to add rich, filmic saturation without harsh clipping. Apply this after the CST node.</p>
         
-        <p>Next we'll correct the exposure and white balance. Make two new nodes BEFORE the CST node.</p>
-        <img src="img/nodes.jpg"/>
-        <p><span class="em">White balance</span> - correct the white balance in the image. I prefer to do this by switching the Gamma of the White Balance node to Linear and using the Gain tool in the Primaries to correct any colour casts.</p>
+        <p><strong>Film Print Look</strong> - Film print LUTs are a staple for achieving cinematic color. For this clip, I’m using my own Film Print LUT designed specifically for automotive footage, with a focus on subtle contrast, natural color, and a refined filmic tone.</p>
 
-        <img src="img/lineargamma.jpg"/>
 
-        <div class="info">Try your best to set the correct white balance in-camera. With video, we're usually not shooting RAW (note: LOG is not RAW), so the white balance is somewhat baked into the footage. We don't want to have to make drastic changes.</div>
+        <p>With over 400 LUT packs already sold in the portrait space <a href="https://www.etsy.com/shop/retrogradelabs" class="link-light">(view here)</a>, I'm now bringing that same filmic, refined color science to the automotive world. This LUT is the result of years of practical grading, built to enhance your footage without overprocessing, and to deliver a clean, cinematic finish.</p>
 
-        <p><span class="em">Exposure</span> - make exposure adjustments to the image. I use the Global Exp slider in the HDR - Color Wheels tab. You can also make some contrast adjustments here.</p>
-
-        <p>Remember to set the correct colour space and gamma in your HDR tab, so Davinci knows how to correctly respond to your exposure adjustments. In my case, this is S-Log3.</p>
-        <img src="exposure.PNG"/>
-
-        <h3>3. creative looks</h3>
-
-        <p>By now, you have a colour corrected, exposure corrected image which probably looks fine but not inspiring. Now that we have the basics out of the way, we can start developing the creative look.</p>
-
-        <p>What methods can you use to achieve that?</p>
-
-        <p><span class="em">Colour boost</span> - Add saturation to the image, increasing the intensity while keeping the colours rich and dense. The best method for this is a technique called subtractive saturation. There are many ways to achieve this. If you have the Davinci Film Look Creator tool, use the Subtractive Sat slider. Alternatively, I have created a filmic Colour Boost LUT which you can download and use for free. This works best in a node after your CST.</p>
-
-        <div style="text-align: center;">
-          <a href="ke5hh_boost.cube" download>
-            <div class="btn">
-              <div class="btn-icon"><i class="fas fa-file-download"></i></div>
-              <div class="btn-txt">Colour Boost LUT</div>
+        <div class="text-center pt-2 pb-4">
+          <a href="colour.ke5hh.com">
+            <div class="btn btn-light">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              Film Print LUT
             </div>
           </a>
         </div>
 
-<!--         <p><span class="em">Film print</span> - one of the most common ways to add a creative look is to use a film print LUT. There are many out there. One of the common issues I see with them is the way they handle red lights. Not usually an issue for typical video applications like portraiture, weddings or commercial. It does become an issue when you start filming cars and their rear lights.</p>
+        <p><strong>Halation</strong> - Use it sparingly. Halation is the glowing edge effect seen in film, caused by light scattering within the layers of emulsion. It adds atmosphere, but less is more. I'm working on a Halation plugin, stay tuned.</p>
 
-        <p>To address this, I've made a custom film print LUT designed with automotive video in mind.</p>
-
-        <div style="text-align: center;">
-          <a href="#">
-            <div class="btn">
-              <div class="btn-icon">
-                <i class="fa-solid fa-up-right-from-square"></i>
-              </div>
-              <div class="btn-txt">Film Print LUT</div>
-            </div>
-          </a>
-        </div> -->
-
-        <p><span class="em">Split toning</span> - another common way to add some contrast to your image, using a push-pull principle. Generally, this involves adding a teal tint to your shadows, and an orange tint to your midtones and highlights. Be very careful not to overdo this. It's best when its effect is subconsciously felt rather than consciously percieved.</p>
-
-        <p><span class="em">Halation</span> - use it sparingly. Halation is the subtle glow that film renders along bright edges in the frame. It's a result of light reflecting off the emulsion layers of film.</p>
-
-        <p><span class="em">And that's all it really takes </span> - no gatekeeping, no ads, no bs. If you found this guide useful, a like or follow on my Instagram would be much appreciated :)</p>
-        <p><a class="ig-inline" href="https://www.instagram.com/ke5hh/"><i class="fa-brands fa-instagram"></i> ke5hh</a></p>
-
-
-
-        <h2>examples</h2>
-        <img src="img/4.webp">
-        <img src="img/1.webp">
-        <img src="img/2.webp">
-        <img src="img/3.webp">
-
+        <p>Other work graded using this same technique:</p>
       </div>
-    </div>
+      
 
-    <div id="footer">
-      <p>kesh</p>
-      <p>Automotive videographer based in Surrey, UK</p>
-      <p>Got ideas?</p>
-      <p>projects@ke5hh.com</p>
+
+
+    </div>
+    <div class="mb-4">
+      <a class="link-light" href="https://www.instagram.com/ke5hh/"><i class="bi bi-instagram"></i></a>
     </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

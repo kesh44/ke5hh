@@ -24,11 +24,19 @@ body {
   color: #f5f5f7;
 }
 
-img {
+.profile {
   clip-path: circle();
   width: 96px;
 }
 
+img {
+  width: 100%;
+}
+
 iframe {
   aspect-ratio: 9 / 16;
+}
+
+.text-left {
+  text-align: left;
 }
