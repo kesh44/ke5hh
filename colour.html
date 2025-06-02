@@ -28,11 +28,11 @@
       <p class="pb-5">A clear and practical workflow for DaVinci Resolve.</p>
 
       <div class="text-left">
-        <img src="img/ariso.jpg">
+        <img src="img/e30.png">
 
 
-        <p class="h3 my-4 fw-bold">Set Up Color Management</p>
-        <p><strong>Convert to Rec.709</strong> - Use a Color Space Transform (CST) node to convert your LOG footage to Rec.709. For example, I convert S-Log3 to Rec.709 Gamma 2.2. The gamma setting depends on your monitor - if you're unsure, it's likely displaying Gamma 2.4.</p>
+        <p class="h3 my-4 fw-bold">1. Set Up Color Management</p>
+        <p><strong>Convert to Rec.709</strong> - Use a Color Space Transform (CST) node to convert your LOG footage to Rec.709. For example, <a class="link-light" href="https://amzn.to/4d5SeyX">my camera</a> shoots in S-Log3, so I convert S-Log3 to Rec.709 Gamma 2.2. The gamma setting depends on your monitor - if you're unsure, it's likely displaying Gamma 2.4.</p>
         <img class="mt-2 mb-4" src="img/cst.jpg">
         <p>Although the Rec.709 transform typically comes last in a grading pipeline, we apply it first here to view an accurate representation of the image during grading.</p>
 
@@ -40,7 +40,7 @@
 
         <p>If your image doesn’t look good after this step, the issue is likely with your exposure, white balance, or CST settings.</p>
 
-        <p class="h3 my-4 fw-bold">Make Basic Corrections</p>
+        <p class="h3 my-4 fw-bold">2. Make Basic Corrections</p>
 
         <p>Create two nodes before the CST node for white balance and exposure adjustments.</p>
         <img class="mt-2 mb-4" src="img/nodes.jpg"/>
@@ -52,7 +52,7 @@
 
         <p>Make sure the HDR tab is set to the correct color space and gamma (e.g., S-Log3) so Resolve processes the exposure properly.</p>
         
-        <p class="h3 my-4 fw-bold">Apply Creative Looks</p>
+        <p class="h3 my-4 fw-bold">3. Apply Creative Looks</p>
 
         <p>At this stage, you should have a technically accurate image. Now, it’s time to bring it to life with a stylized look.</p>
 
@@ -76,13 +76,15 @@
         <p><strong>Halation</strong> - Use it sparingly. Halation is the glowing edge effect seen in film, caused by light scattering within the layers of emulsion. It adds atmosphere, but less is more. I'm working on a Halation plugin, stay tuned.</p>
 
         <p>Other work graded using this same technique:</p>
+        <img src="img/560.jpg">
+        <img src="img/m2.jpg">
       </div>
       
 
 
 
     </div>
-    <div class="mb-4">
+    <div class="pb-5">
       <a class="link-light" href="https://www.instagram.com/ke5hh/"><i class="bi bi-instagram"></i></a>
     </div>
   </div>
