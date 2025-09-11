@@ -262,8 +262,8 @@ p {
 /* Hero Name Overlay */
 .hero-name-overlay {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  bottom: 1.4rem;
+  left: 1.4rem;
   text-align: left;
   z-index: 15;
 }
@@ -337,9 +337,7 @@ p {
 }
 
 .flagship-headline {
-  font-size: 1rem;
   text-transform: uppercase;
-  font-weight: 200;
   line-height: 1.2;
   margin-bottom: 2rem;
   color: var(--black);
@@ -401,7 +399,6 @@ p {
 
 .example-card {
   flex: 0 0 315px;
-  background: var(--gray-light);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -426,7 +423,7 @@ p {
 }
 
 .example-card-caption {
-  padding: 0.6rem;
+  padding-top: 0.2rem;
   text-align: left;
 }
 
