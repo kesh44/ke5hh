@@ -446,6 +446,13 @@ p {
 }
 
 /* Product Details Section */
+.compatibility-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 30px;
+  opacity: 0.9;
+}
+
 .lut-card {
   background: var(--gray-light);
   border-radius: 12px;
