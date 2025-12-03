@@ -71,8 +71,9 @@
                     
                     <!-- Name Overlay -->
                     <div class="hero-name-overlay">
-                      <h2 class="hero-name">Kesh</h2>
-                      <p class="hero-role">Creative Director & Colourist</p>
+                      <h2 class="hero-name">kesh</h2>
+                      <p class="hero-role">creative director & colourist</p>
+                      <p class="hero-role">projects@ke5hh.com</p>
                     </div>
                   </div>
                 </div>
@@ -84,20 +85,20 @@
         <!-- Flagship Product Section -->
         <section class="mx-4">
           <h1 class="flagship-headline pt-4">Not all LUTs<br>are created equal</h1>
-          <p class="my-5">400+ videographers have already elevated their colour grades. This pack of 4 LUTs is built for a soft, cinematic film look. They’re accurate, versatile, and make it easy to achieve cinematic colour grades.</p>
+          <p class="my-4">400+ videographers have already elevated their colour grades. This pack of 4 LUTs is built for a soft, cinematic film look. They’re accurate, versatile, and make it easy to achieve cinematic colour grades.</p>
         </section>
         
         <section>
           <div class="products-scroll-container">
             <div class="products-track">
               <!-- Product Card 1 -->
-              <a href="https://kesh44.gumroad.com/l/jrcmch?wanted=true" class="product-card" target="_blank" rel="noopener">
+              <a href="https://kesh44.gumroad.com/l/jrcmch" class="product-card" target="_blank" rel="noopener">
                 <div class="product-card-image-wrapper">
                   <img src="img/placeholder.webp" alt="RETROGRADED LUT Bundle" class="product-card-image" />
                   <span class="sale-badge">SALE</span>
                 </div>
                 <div class="product-card-content">
-                  <h3 class="product-card-title">RETROGRADED</h3>
+                  <h3 class="product-card-title">FILM LOOKS</h3>
                   <p class="product-card-description">Four LUTs inspired by the color science of my Blackmagic URSA cinema camera, these LUTs bring a natural, film-like quality while staying flexible across different cameras and conditions.</p>
                   <div class="product-card-price">
                     <span class="price-original">$24.99</span>
@@ -107,12 +108,12 @@
               </a>
               
               <!-- Product Card 2 -->
-              <a href="https://kesh44.gumroad.com/l/ke5hh-boost?wanted=true" class="product-card" target="_blank" rel="noopener">
+              <a href="https://kesh44.gumroad.com/l/tiyyxg" class="product-card" target="_blank" rel="noopener">
                 <div class="product-card-image-wrapper">
-                  <img src="img/placeholder.webp" alt="Colour Boost LUT" class="product-card-image" />
+                  <img src="img/boost.png" alt="Colour Boost LUT" class="product-card-image" />
                 </div>
                 <div class="product-card-content">
-                  <h3 class="product-card-title">BOOST</h3>
+                  <h3 class="product-card-title">COLOUR BOOST</h3>
                   <p class="product-card-description">A simple colour boost LUT to add filmic, subtractive saturation.</p>
                   <div class="product-card-price">
                     <span class="price-current">$0.00</span>
@@ -127,7 +128,6 @@
         <section id="testimonials" class="testimonials-section py-5">
           <div class="">
             <h2 class="section-title text-center mb-5">Trusted by<br>400+ creators</h2>
-            <p class="text-center mb-5">Verified reviews from creators who have used the RETROGRADED LUT pack on my old store on Etsy.</p>
             
             <div class="testimonials-scroll-container">
               <div class="testimonials-track" id="testimonialsTrack">
@@ -587,7 +587,7 @@
       let currentX = 0;
       
       function animateCarousel() {
-        currentX -= 0.5; // Adjust speed here (pixels per frame)
+        currentX -= 1; // Adjust speed here (pixels per frame)
         
         // When first card is completely off-screen, move it to the end
         if (Math.abs(currentX) >= cardWidth) {
