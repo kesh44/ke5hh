@@ -48,6 +48,7 @@ p {
 .hero-showcase {
   padding: 0;
   margin-top: 0;
+  position: relative;
 }
 
 .showcase-video-container {
@@ -56,7 +57,7 @@ p {
 
 .video-wrapper {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 2.4 / 1;
   position: relative;
   overflow: hidden;
 }
@@ -165,25 +166,37 @@ p {
 
 /* Hero Name Overlay */
 .hero-name-overlay {
-  position: absolute;
-  bottom: 1.4rem;
-  left: 1.4rem;
-  text-align: left;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem;
   z-index: 15;
+  background: var(--white);
+}
+
+.hero-name-left {
+  flex: 0 0 auto;
+}
+
+.hero-name-right {
+  flex: 0 0 auto;
+  text-align: right;
 }
 
 .hero-name {
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1.5rem;
   font-weight: 900;
-  color: var(--white);
-  margin: 0 0 0.25rem 0;
+  color: var(--black);
+  margin: 0;
   line-height: 1.2;
 }
 
 .hero-role {
   font-size: 0.85rem;
-  color: var(--white);
+  color: var(--black);
   margin: 0;
   font-weight: 400;
   line-height: 1.3;
@@ -439,7 +452,8 @@ p {
 
 .product-card-price {
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  justify-content: center;
   gap: 0.75rem;
   margin-top: auto;
 }
@@ -448,6 +462,7 @@ p {
   color: var(--gray-medium);
   text-decoration: line-through;
   font-weight: 400;
+  line-height: 1.2;
 }
 
 .price-current {
@@ -455,6 +470,7 @@ p {
   font-weight: 900;
   color: var(--black);
   font-family: 'Inter', sans-serif;
+  line-height: 1.2;
 }
 
 /* Utilities */
