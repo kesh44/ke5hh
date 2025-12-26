@@ -213,6 +213,7 @@ p {
 .example-card {
   flex: 0 0 315px;
   overflow: hidden;
+  border-radius: 9px;
 }
 
 .example-video-container {
@@ -236,12 +237,13 @@ p {
 
 .example-card-caption {
   padding-top: 0.2rem;
+  padding-right: 0.5rem;
   text-align: left;
 }
 
 
 .example-card-caption p {
-  color: var(--gray-medium);
+  color: var(--black);
   font-size: 0.85rem;
   line-height: 1.5;
   margin: 0;
