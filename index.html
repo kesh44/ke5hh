@@ -362,7 +362,14 @@
                   </div>
                 </div>
               </div>
-              <p class="mt-4 px-3">Also included: a utility LUT that applies film-style subtractive saturation. Adds color density and cohesion without oversaturation, ideal for refining a final grade.</p>
+              <div class="text-center pt-4 px-4">
+                <div style="background: #f6f6f7; border-radius: 9px; border: 3px solid #222;">
+                  <p class="p-2 pb-0" style="font-style: normal; color: #222;">
+                    <strong>Also included:</strong> A utility LUT that applies film-style subtractive saturation. Adds color density and cohesion without oversaturation, ideal for refining a final grade.
+                  </p>
+                </div>
+              </div>
+
             </section>
             
             <!-- Product Details Section -->
@@ -406,12 +413,12 @@
                       <div class="accordion-item">
                         <h2 class="accordion-header" id="faq1">
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                            What exactly is a LUT and how does it work?
+                            What's the proper order of operations when applying creative LUTs?
                           </button>
                         </h2>
                         <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
                           <div class="accordion-body">
-                            A LUT (Look-Up Table) is a mathematical formula that transforms the colors in your video. Think of it as an Instagram filter, but much more precise and professional. When you apply a LUT, it maps each color in your original footage to a new color, creating a specific mood or aesthetic instantly. Our automotive LUTs are specifically designed to enhance car footage with cinematic color grading.
+                            The best practice is to separate technical corrections from creative looks. First, normalize your footage to Rec.709 if it's in log or a different color space. Make your exposure, white balance, and basic corrections first. Then apply the creative LUT on top of properly balanced footage. This workflow ensures the LUT receives consistent input and produces predictable results. In DaVinci Resolve, this means using nodes: correction nodes first, then your creative LUT node, followed by any final refinements.
                           </div>
                         </div>
                       </div>
@@ -420,12 +427,12 @@
                       <div class="accordion-item">
                         <h2 class="accordion-header" id="faq2">
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                            Do I need expensive equipment or software to use these LUTs?
+                            How do I match shots across a sequence for consistent color grading?
                           </button>
                         </h2>
                         <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
                           <div class="accordion-body">
-                            Not at all! These LUTs work with any video editing software that supports .cube files, including free options like DaVinci Resolve. You can even use them with footage shot on your phone. The key is shooting in the best quality your camera allows (like 4K if available) and avoiding over-exposure. Professional cameras help, but they're not required to get great results.
+                            Start by matching exposure and contrast across all shots before applying your creative LUT. Use scopes (waveform, vectorscope) to ensure similar luminance levels and color balance. Apply the same LUT to all shots in the sequence, then make individual adjustments only where necessary. Pay attention to skin tones and neutral elements (grays, whites) as reference points. In DaVinci Resolve, use the ColorTrace feature to copy grades between shots, then fine-tune. The key is establishing a consistent base before the creative look.
                           </div>
                         </div>
                       </div>
@@ -434,12 +441,12 @@
                       <div class="accordion-item">
                         <h2 class="accordion-header" id="faq3">
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                            Will these LUTs work with any car color or lighting condition?
+                            Should I apply LUTs to log footage or Rec.709 footage?
                           </button>
                         </h2>
                         <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
                           <div class="accordion-body">
-                            Yes! Each LUT in the RETROGRADED pack is designed to enhance different scenarios. "Clean Boost" works universally with any car color, while "Cinematic Teal" excels with darker vehicles. "Sunset Glow" is perfect for golden hour shots, and "Urban Edge" handles challenging lighting conditions. We recommend trying different LUTs to see which complements your specific footage best.
+                            These LUTs are designed to work on Rec.709 footage, not log. The reason is flexibility: by normalizing to Rec.709 first, you ensure consistent input regardless of your camera's log curve. Convert your log footage to Rec.709 using your camera's official LUT or color space transform, make your technical corrections, then apply the creative LUT. This methodology separates the technical conversion from the creative look, giving you more control and predictable results across different cameras and shooting conditions.
                           </div>
                         </div>
                       </div>
@@ -448,12 +455,12 @@
                       <div class="accordion-item">
                         <h2 class="accordion-header" id="faq4">
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                            How do I install and apply these LUTs in my editing software?
+                            What's the difference between technical and creative LUTs, and when should I use each?
                           </button>
                         </h2>
                         <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
                           <div class="accordion-body">
-                            It's simple! Download the .cube files, then in your editing software: <strong>Premiere Pro:</strong> Go to Lumetri Color panel > Basic Correction > Input LUT > Browse and select your LUT. <strong>Final Cut Pro:</strong> Add Color Correction effect > Lookup Table > choose your LUT file. <strong>DaVinci Resolve:</strong> Right-click in the LUT folder > Import LUT, then apply from the Color page. Detailed instructions are included with your download.
+                            Technical LUTs convert between color spaces (e.g., log to Rec.709) and should be applied first to normalize your footage. Creative LUTs, like these film looks, add artistic character and should be applied after technical corrections. The methodology is: technical correction → exposure/balance adjustments → creative LUT → final refinements. Never apply a creative LUT to log footage expecting it to also do the technical conversion - this creates unpredictable results and limits your ability to make proper corrections.
                           </div>
                         </div>
                       </div>
@@ -462,12 +469,26 @@
                       <div class="accordion-item">
                         <h2 class="accordion-header" id="faq5">
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                            Can I adjust the intensity of the LUT or combine it with other effects?
+                            How do I refine a grade after applying a LUT without breaking the look?
                           </button>
                         </h2>
                         <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#faqAccordion">
                           <div class="accordion-body">
-                            Absolutely! Most editing software allows you to reduce the LUT intensity (usually called "Amount" or "Mix") if you want a more subtle effect. You can also layer additional color corrections on top - adjust exposure, contrast, or saturation after applying the LUT. This gives you complete creative control while using our LUTs as the foundation for your unique look.
+                            Make adjustments in nodes after the LUT, not before. Use secondary corrections (qualifiers/masks) for specific areas rather than global changes that affect the entire image. If you need to adjust exposure, do it subtly and watch your highlights and shadows - film looks often have specific rolloff characteristics you don't want to flatten. For color adjustments, work with the LUT's color palette rather than against it. Use curves for fine-tuning contrast in specific ranges. The key is understanding that the LUT establishes the foundation; your refinements should enhance, not replace, that foundation.
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- FAQ 6 -->
+                      <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq6">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                            What are the best practices for exposure when preparing footage for film look LUTs?
+                          </button>
+                        </h2>
+                        <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="faq6" data-bs-parent="#faqAccordion">
+                          <div class="accordion-body">
+                            Aim for proper exposure in-camera, avoiding clipped highlights and crushed shadows. Film look LUTs work best with footage that has information across the entire tonal range. When correcting exposure before applying the LUT, use your waveform monitor to ensure you're not overcorrecting - slight underexposure is often more forgiving than overexposure. The LUT will add its characteristic contrast and color response, so start with a balanced, neutral image. Avoid pushing exposure too hard in post; let the LUT do the heavy lifting for the look.
                           </div>
                         </div>
                       </div>
