@@ -362,9 +362,9 @@
                   </div>
                 </div>
               </div>
-              <div class="text-center pt-4 px-4">
-                <div style="background: #f6f6f7; border-radius: 9px; border: 3px solid #222;">
-                  <p class="p-2 pb-0" style="font-style: normal; color: #222;">
+              <div class="text-center pt-4 px-3">
+                <div style="background: #f5f5f7; border-radius: 9px;">
+                  <p class="p-4" style="font-size: 0.85rem; line-height: 1.5; color: #222;">
                     <strong>Also included:</strong> A utility LUT that applies film-style subtractive saturation. Adds color density and cohesion without oversaturation, ideal for refining a final grade.
                   </p>
                 </div>
@@ -500,20 +500,22 @@
             </section>
             
             <!-- Footer -->
-            <footer class="footer py-4">
+            <footer class="footer">
               <div class="container">
-                <div class="row text-center">
-                  <div class="col-md-6">
-                    <p>KE5HH</p>
-                  </div>
-                  <div class="col-md-6">
-                    <a href="https://www.instagram.com/ke5hh/" class="social-link ">
-                      <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="mailto:projects@ke5hh.com" class="social-link">
+                <div class="footer-content">
+                  <div class="footer-links">
+                    <a href="mailto:projects@ke5hh.com" class="footer-link">
                       <i class="fas fa-envelope"></i>
+                      <span>projects@ke5hh.com</span>
+                    </a>
+                    <a href="https://www.instagram.com/ke5hh/" target="_blank" rel="noopener" class="footer-link">
+                      <i class="fab fa-instagram"></i>
+                      <span>@ke5hh</span>
                     </a>
                   </div>
+                </div>
+                <div class="footer-bottom">
+                  <p class="footer-copyright">&copy; <span id="currentYear"></span> kesh. All rights reserved.</p>
                 </div>
               </div>
             </footer>
@@ -649,6 +651,12 @@
                   });
                 });
               });
+              
+              // Set current year in copyright
+              const currentYearElement = document.getElementById('currentYear');
+              if (currentYearElement) {
+                currentYearElement.textContent = new Date().getFullYear();
+              }
             </script>
           </body>
           </html>
