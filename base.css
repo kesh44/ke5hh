@@ -10,11 +10,33 @@ body {
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: var(--white);
+  background-color: var(--gray-light);
   color: var(--black);
   line-height: 1.4;
   font-weight: 400;
   overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Mobile Container - width restricted on desktop */
+.mobile-container {
+  width: 100%;
+  max-width: 100%;
+  background-color: var(--white);
+  position: relative;
+  min-height: 100vh;
+}
+
+@media (min-width: 769px) {
+  .mobile-container {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  }
 }
 
 /* Typography - Consistent Styles */
