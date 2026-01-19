@@ -32,7 +32,7 @@ body {
 
 @media (min-width: 769px) {
   .mobile-container {
-    max-width: 450px;
+    max-width: 600px;
     width: 100%;
     margin: 0 auto;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
@@ -622,6 +622,35 @@ p, .text-main {
   
   .about-photo-wrapper {
     max-width: 250px;
+  }
+}
+
+/* Sticky Mobile CTA */
+.sticky-cta-mobile {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem;
+  background: transparent;
+  z-index: 1000;
+  display: none;
+}
+
+.sticky-cta-mobile .btn-primary {
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.12), 0 -2px 8px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+  .sticky-cta-mobile {
+    display: block;
+  }
+  
+  /* Add padding to body to prevent content from being hidden behind sticky CTA */
+  body {
+    padding-bottom: 90px;
   }
 }
 
