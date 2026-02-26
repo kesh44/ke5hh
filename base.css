@@ -306,6 +306,65 @@ p, .text-main {
   color: var(--black);
 }
 
+/* Creator Testimonial Cards (video + name, review, social link) */
+.creator-testimonial-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.creator-testimonial-caption {
+  padding: 0.5rem 0.5rem 0 0;
+  text-align: left;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.creator-testimonial-name {
+  margin: 0;
+  color: var(--black);
+  font-size: 0.95rem;
+}
+
+.creator-testimonial-review {
+  margin: 0;
+  color: var(--gray-dark);
+  line-height: 1.45;
+}
+
+.creator-testimonial-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--black);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  margin-top: 0.25rem;
+}
+
+.creator-testimonial-social:hover {
+  text-decoration: underline;
+}
+
+.creator-testimonial-social i {
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+/* Client-work cards (no testimonial — just "Private client work" label) */
+.work-showcase-caption {
+  padding: 1rem 0.5rem 0 0;
+  text-align: left;
+}
+
+.work-showcase-caption p {
+  margin: 0;
+  color: var(--gray-dark);
+  line-height: 1.4;
+}
+
 /* Product Details Section */
 .compatibility-image {
   max-width: 100%;
@@ -611,6 +670,24 @@ p, .text-main {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Instagram embed - centered, constrained width */
+.instagram-embed-wrapper {
+  margin-top: 2.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.instagram-embed-wrapper iframe {
+  width: 100%;
+  max-width: 340px;
+  min-height: 340px;
+  margin: 0 auto;
+  display: block;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
 
 @media (max-width: 768px) {
   h1 {

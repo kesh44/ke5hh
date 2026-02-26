@@ -80,11 +80,6 @@
   <!-- Flagship Product Section -->
   <section class="py-5 pb-3 px-4">
     <h1 class="text-center mb-5">PROFESSIONAL GRADES<br>FROM REAL PROJECTS</h1>
-    <p class="text-center mb-3" style="color: var(--black);">
-      <span style="background: #ffd700; padding: 0.5rem 1rem; border-radius: 6px; display: inline-block;">
-        <i class="fas fa-users"></i> 400+ creators already using these
-      </span>
-    </p>
     <p class="">Built for a <strong>soft, organic image</strong>, these professional LUTs are accurate, versatile, and deliver the premium aesthetic big clients demand. The same grades I've used in <strong>real projects</strong> with substantial production budgets.</p>
   </section>
   
@@ -94,7 +89,7 @@
       <div class="product-card product-card--featured my-4" style="max-width:500px; width:100%;">
         <a href="https://kesh44.gumroad.com/l/filmlooks" target="_blank" rel="noopener" class="text-decoration-none text-reset">
           <div class="product-card-image-wrapper position-relative" style="border-radius:9px; overflow:hidden;">
-            <div class="sale-badge">SALE</div>
+            <!-- <div class="sale-badge">SALE</div> -->
             <img src="img/filmlooks.jpg" alt="RETROGRADED LUT Bundle" class="product-card-image" style="width:100%;display:block;" />
           </div>
           <div class="product-card-content py-4">
@@ -107,14 +102,14 @@
               <img src="img/supported.png" alt="Compatible with DaVinci Resolve, Premiere Pro, Final Cut Pro, and more" class="compatibility-image" />
             </div>
             <div class="product-card-price mb-2">
-              <span class="price-original">$25</span>
-              <span class="price-current fw-bold" style="font-size:1.4rem;">$15</span>
+              <!-- <span class="price-original">$25</span> -->
+              <span class="price-current fw-bold mb-3" style="font-size:1.4rem;">$25</span>
             </div>
-            <p class="text-center text-small mb-3" style="font-weight: 700;">
+            <!-- <p class="text-center text-small mb-3" style="font-weight: 700;">
               <i class="fas fa-clock"></i> Limited time offer
-            </p>
+            </p> -->
             <a href="https://kesh44.gumroad.com/l/filmlooks" class="btn btn-primary btn-lg w-100" target="_blank" rel="noopener">
-              Get Instant Access - $15
+              Get Instant Access
             </a>
             <p class="text-center text-small mt-3 mb-0" style="color: var(--gray-medium);">
               <i class="fas fa-shield-alt"></i> Instant download • Used by 400+ creators
@@ -297,17 +292,17 @@
 
             </section>
             
-            <!-- Graded with my LUTs Section -->
-            <section id="graded-showcase" class="examples-section py-5">
-              <h2 class="section-title text-center mb-5 px-4">GRADED WITH MY LUTs</h2>
+            <!-- Testimonials + client work (one creator testimonial, rest = Kesh's client work) -->
+            <section id="creator-testimonials" class="examples-section py-5">
+              <h2 class="section-title text-center mb-2 px-4">TESTIMONIALS & CLIENT WORK</h2>
+              <p class="text-center text-small mb-5 px-4" style="color: var(--gray-dark); max-width: 560px; margin-left: auto; margin-right: auto;">What creators say about these LUTs, plus work I've shot and graded for private clients, all graded with this pack.</p>
               
               <div class="products-scroll-container">
                 <div class="products-track">
-                  <!-- Video Card 1 -->
-                  <div class="example-card">
+                  <!-- Card 1: Real testimonial (LUCID MEDIA) -->
+                  <div class="example-card creator-testimonial-card">
                     <div class="example-video-container portrait-video">
                       <div class="video-wrapper">
-                        <!-- Loading Bar -->
                         <div class="video-loading-overlay">
                           <div class="loading-bar-container">
                             <div class="loading-bar">
@@ -315,26 +310,28 @@
                             </div>
                           </div>
                         </div>
-                        
-                        <video class="example-video" autoplay muted loop playsinline data-lazy-video="vid/ex1.mp4">
-                          <source data-src="vid/ex1.mp4" type="video/mp4">
+                        <video class="example-video" autoplay muted loop playsinline data-lazy-video="vid/kieran.mp4">
+                          <source data-src="vid/kieran.mp4" type="video/mp4">
                           <div class="video-fallback">
                             <div class="video-content">
-                              <div class="play-button">
-                                <i class="fas fa-play"></i>
-                              </div>
+                              <div class="play-button"><i class="fas fa-play"></i></div>
                             </div>
                           </div>
                         </video>
                       </div>
                     </div>
+                    <div class="creator-testimonial-caption">
+                      <p class="creator-testimonial-name"><strong>LUCID MEDIA</strong></p>
+                      <p class="creator-testimonial-name"><strong>Head Videographer at Ludere Studio</strong></p>
+                      <p class="creator-testimonial-review text-small">ive been looking for a good film LUT pack for too long, its always the ones no one knows about that are the best! These are SO good</p>
+                      <a href="https://www.instagram.com/lucidmedia.uk/" target="_blank" rel="noopener" class="creator-testimonial-social">@lucidmedia.uk <i class="fas fa-external-link-alt"></i></a>
+                    </div>
                   </div>
                   
-                  <!-- Video Card 2 -->
-                  <div class="example-card">
+                  <!-- Card 2: Your client work (showcase only) -->
+                  <div class="example-card creator-testimonial-card creator-testimonial-card--showcase">
                     <div class="example-video-container portrait-video">
                       <div class="video-wrapper">
-                        <!-- Loading Bar -->
                         <div class="video-loading-overlay">
                           <div class="loading-bar-container">
                             <div class="loading-bar">
@@ -342,26 +339,25 @@
                             </div>
                           </div>
                         </div>
-                        
                         <video class="example-video" autoplay muted loop playsinline data-lazy-video="vid/ex2.mp4">
                           <source data-src="vid/ex2.mp4" type="video/mp4">
                           <div class="video-fallback">
                             <div class="video-content">
-                              <div class="play-button">
-                                <i class="fas fa-play"></i>
-                              </div>
+                              <div class="play-button"><i class="fas fa-play"></i></div>
                             </div>
                           </div>
                         </video>
                       </div>
                     </div>
+                    <div class="work-showcase-caption">
+                      <p class="text-small">Private client work · graded with these LUTs</p>
+                    </div>
                   </div>
                   
-                  <!-- Video Card 3 -->
-                  <div class="example-card">
+                  <!-- Card 3: Your client work (showcase only) -->
+                  <div class="example-card creator-testimonial-card creator-testimonial-card--showcase">
                     <div class="example-video-container portrait-video">
                       <div class="video-wrapper">
-                        <!-- Loading Bar -->
                         <div class="video-loading-overlay">
                           <div class="loading-bar-container">
                             <div class="loading-bar">
@@ -369,111 +365,24 @@
                             </div>
                           </div>
                         </div>
-                        
                         <video class="example-video" autoplay muted loop playsinline data-lazy-video="vid/ex3.mp4">
                           <source data-src="vid/ex3.mp4" type="video/mp4">
                           <div class="video-fallback">
                             <div class="video-content">
-                              <div class="play-button">
-                                <i class="fas fa-play"></i>
-                              </div>
+                              <div class="play-button"><i class="fas fa-play"></i></div>
                             </div>
                           </div>
                         </video>
                       </div>
                     </div>
+                    <div class="work-showcase-caption">
+                      <p class="text-small">Private client work · graded with these LUTs</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </section>
-            
-            <!-- Testimonials Section -->
-            <section id="testimonials" class="testimonials-section py-5">
-              <h2 class="section-title text-center mb-5 px-4">400+ SALES<br>PROVEN QUALITY</h2>
-              
-              <div class="testimonials-scroll-container">
-                <div class="testimonials-track" id="testimonialsTrack">
-                  <!-- Testimonial Card 1 -->
-                  <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text text-main">"ive been looking for a good film LUT pack for too long, its always the ones no one knows about that are the best! These are SO good"</p>
-                    <div class="testimonial-author text-gray">Anonymous</div>
-                  </div>
-                  
-                  <!-- Testimonial Card 2 -->
-                  <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text text-main">"I love how it has elevated my clips on Premiere, I look forward to trying it out on other footage I have"</p>
-                    <div class="testimonial-author text-gray">Lucy</div>
-                  </div>
-                  
-                  <!-- Testimonial Card 3 -->
-                  <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text text-main">"You can tell these were made by someone who understands colour. Great base looks that hold up across different shots 🙏"</p>
-                    <div class="testimonial-author text-gray">Anonymous</div>
-                  </div>
-                  
-                  <!-- Testimonial Card 4 -->
-                  <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text text-main">"Great presets thank you for this!"</p>
-                    <div class="testimonial-author text-gray">Karl-Raphael</div>
-                  </div>
-                  
-                  <!-- Testimonial Card 5 -->
-                  <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text text-main">"Great for video and photos, gives a very beautiful goldy style, I recommend"</p>
-                    <div class="testimonial-author text-gray">Daphne</div>
-                  </div>
-                  
-                  <!-- Testimonial Card 6 -->
-                  <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text text-main">"This LUT gives a really clean effect on every photo I've tried. Great quality, thank you so much!"</p>
-                    <div class="testimonial-author text-gray">RLK</div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            
+                        
             <!-- Product Details Section -->
             <section id="product-details" class="product-details-section py-5 px-4">
               <h2 class="section-title mb-4 text-center">WHAT'S INSIDE</h2>
@@ -504,6 +413,9 @@
                 <p class="text-main mb-0">
                   Each grade has been tested across different cameras, lighting conditions, and project types. They're built to be reliable, consistent, and adaptable to your workflow.
                 </p>
+                <div class="instagram-embed-wrapper">
+                  <iframe src="https://www.instagram.com/ke5hh/embed/" frameborder="0" title="Follow @ke5hh on Instagram"></iframe>
+                </div>
               </div>
             </section>
             
