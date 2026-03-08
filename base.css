@@ -21,6 +21,9 @@ body {
   min-height: 100vh;
 }
 
+section {
+  overflow-x: hidden;
+}
 /* Mobile Container - width restricted on desktop */
 .mobile-container {
   width: 100%;
@@ -136,7 +139,6 @@ p, .text-main {
   width: 100%;
   height: 2px;
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 1px;
   overflow: hidden;
 }
 
@@ -144,7 +146,6 @@ p, .text-main {
   width: 0%;
   height: 100%;
   background: var(--white);
-  border-radius: 1px;
   transition: width 0.2s ease;
 }
 
@@ -168,7 +169,6 @@ p, .text-main {
 .play-button {
   width: 80px;
   height: 80px;
-  border-radius: 50%;
   border: 2px solid var(--white);
   background: transparent;
   display: flex;
@@ -188,7 +188,6 @@ p, .text-main {
   padding: 1rem 2.5rem;
   font-size: 1rem;
   font-weight: 600;
-  border-radius: 8px;
   font-family: inherit;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -267,7 +266,82 @@ p, .text-main {
 .example-card {
   flex: 0 0 315px;
   overflow: hidden;
+}
+
+.example-card--2-1 {
+  flex: 0 0 630px;
+}
+
+/* LUT explore: name buttons + detail panels */
+.lut-buttons-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.lut-buttons-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.lut-buttons-track {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: min-content;
+}
+
+.lut-btn {
+  flex: 0 0 auto;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6b6b6b;
+  background: #f0f0f0;
+  border: none;
   border-radius: 9px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.lut-btn--active,
+.lut-btn.active {
+  background: #FFC107;
+  color: var(--black);
+  border-color: rgba(220, 180, 80, 0.5);
+  box-shadow: 0 0 5px rgba(255, 230, 160, 0.4), 0 0 10px rgba(255, 210, 100, 1.35), 0 0 10px rgba(240, 190, 80, 0.25);
+}
+
+.lut-detail {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lut-detail-text {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.lut-detail-panel {
+  display: block;
+}
+
+.lut-detail-panel--hidden {
+  display: none;
+}
+
+.lut-detail-title {
+  color: var(--black);
+  font-weight: 700;
+  margin: 0;
+}
+
+.lut-gallery {
+  margin-top: 0.5rem;
 }
 
 .example-video-container {
@@ -284,6 +358,18 @@ p, .text-main {
 
 .portrait-video .video-wrapper {
   aspect-ratio: 9 / 16;
+}
+
+.example-image-container--2-1 .video-wrapper {
+  aspect-ratio: 2 / 1;
+}
+
+.example-gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .example-video {
@@ -318,13 +404,17 @@ p, .text-main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
 }
 
 .creator-testimonial-name {
   margin: 0;
   color: var(--black);
   font-size: 0.95rem;
+}
+
+.creator-testimonial-desc {
+  margin: 0;
+  color: #86868b;
 }
 
 .creator-testimonial-review {
@@ -383,7 +473,6 @@ p, .text-main {
   background: transparent;
   border: 3px solid black;
   margin-bottom: 1rem;
-  border-radius: 8px;
   overflow: hidden;
 }
 
@@ -431,7 +520,6 @@ p, .text-main {
 
 .testimonial-card {
   background: var(--gray-light);
-  border-radius: 8px;
   padding: 2rem;
   width: 300px;
   flex-shrink: 0;
@@ -443,7 +531,6 @@ p, .text-main {
   width: 90px;
   height: 90px;
   object-fit: cover;
-  border-radius: 6px;
   margin-bottom: 1rem;
 }
 
@@ -605,7 +692,6 @@ p, .text-main {
   color: var(--black);
   padding: 6px 12px;
   padding-top: 8px;
-  border-radius: 12px;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -664,7 +750,6 @@ p, .text-main {
 .about-photo {
   width: 100%;
   height: auto;
-  border-radius: 12px;
   object-fit: cover;
   border: 3px solid var(--black);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -684,7 +769,6 @@ p, .text-main {
   margin: 0 auto;
   display: block;
   border: none;
-  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
