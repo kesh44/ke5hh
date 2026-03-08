@@ -205,10 +205,14 @@ p, .text-main {
 }
 
 .btn-primary:active,
-.btn-primary:focus {
-  background: var(--black);
-  color: var(--white);
-  border-color: var(--black);
+.btn-primary:focus,
+.btn-primary:focus-visible,
+a.btn-primary:active,
+a.btn-primary:focus,
+a.btn-primary:focus-visible {
+  background: #FFC107 !important;
+  color: var(--black) !important;
+  border-color: #FFC107 !important;
   transform: translateY(0);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   outline: none;
