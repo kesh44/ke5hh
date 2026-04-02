@@ -10,7 +10,7 @@ body {
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: var(--gray-light);
+  background-color: #0a1618;
   color: var(--black);
   line-height: 1.4;
   font-weight: 400;
@@ -559,7 +559,6 @@ a.btn-primary:focus-visible {
 
 /* Footer */
 .footer {
-  background: var(--gray-dark);
   padding: 3rem 0 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -598,7 +597,7 @@ a.btn-primary:focus-visible {
 }
 
 .footer-link:hover {
-  color: var(--white);
+  color: var(--black);
   text-decoration: none;
 }
 
